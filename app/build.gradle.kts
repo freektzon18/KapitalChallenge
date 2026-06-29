@@ -18,6 +18,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        buildConfigField("String", "BASE_URL", "\"https://api.disneyapi.dev/\"")
     }
 
     buildTypes {
@@ -79,4 +81,5 @@ dependencies {
     testImplementation(libs.test.mockk)
     testImplementation(libs.test.coroutines)
     testImplementation(libs.test.turbine)
+    implementation(libs.coil.compose)
 }
